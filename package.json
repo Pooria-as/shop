@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "shop",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "MERN Ecommerce ",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Pooria",
+  "license": "ISC"
+}
