@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "chalk": "^5.3.0",
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2"
   },
   "name": "shop",
@@ -7,9 +10,14 @@
   "version": "1.0.0",
   "description": "MERN Ecommerce ",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "all": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Pooria",
   "license": "ISC"
