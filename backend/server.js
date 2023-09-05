@@ -1,8 +1,10 @@
 import express from "express"
+import DataBaseConnection from "./config/DataBase.js"
 import products from "./data/products.js"
 import dotenv from "dotenv"
-const app = express()
 dotenv.config()
+DataBaseConnection()
+const app = express()
 const port = process.env.PORT
 
 app.get("/",(req,res)=>{
