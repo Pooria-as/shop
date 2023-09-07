@@ -17,6 +17,6 @@ export const GetProductById = async(req,res) => {
         const product = await Product.find({ _id : id })
         return res.json(product)
     } catch (error) {
-        return res.send(`Error occured ${ error.message }`);
+        return res.send(`Error occured ${ error.message } id not found `);
     }
 }
