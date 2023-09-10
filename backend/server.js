@@ -7,9 +7,12 @@ DataBaseConnection()
 const app = express()
 const port = process.env.PORT
 
-// app.get("/",(req,res)=>{
-//     res.send("Hi pooria")
-// });
+//cors 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 
 
 app.use('/api/products',ProductRoutes)
