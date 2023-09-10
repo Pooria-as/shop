@@ -6,13 +6,12 @@ import { useGetProductsQuery } from '../../slices/productApiSlice'
 const Products = () => {
 
   const { data, isLoading } = useGetProductsQuery()
-  console.log(data);
 
   return (
     <>
       {isLoading ? (<>Loading data ...</>) : <><h1>Latest Product</h1>
         <Row>
-          {products.map((product) => (
+          {data.map((product) => (
             <Col key={product._id} sm={12} md={8} lg={4} xl={3}>
               <Product product={product} />
             </Col>
